@@ -10,26 +10,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Please enter the first number:");
             if (!Int32.TryParse(Console.ReadLine(),out var a))
             {
                 Console.WriteLine("Not a number!");
                 return;
             }
 
+            Console.WriteLine("Please enter the second number:");
             if (!Int32.TryParse(Console.ReadLine(), out var b))
             {
                 Console.WriteLine("Not a number!");
                 return;
             }
-
+            Console.WriteLine("Please enter the symbol for the calculation: +, -, *, /, %");
+            Console.WriteLine("Please enter the character for the calculation in decimal, binary and hexadecimal form.: ^, &, |");
             var s = Console.ReadLine();
-            var boolVar = true;
-            if (s.Length == 0 || s.Length > 1 && !boolVar)
-            {
-                Console.WriteLine("Wrong sign");
-            }
-            switch(s[0])
+            //var boolVar = true;
+            //if (s.Length == 0 || s.Length > 1 && !boolVar)
+            //{
+            //    Console.WriteLine("Wrong sign");
+            //} 
+            switch (s[0])
             {
                 case '+':
                     Console.WriteLine("Result of {0} + {1} = {2}", a, b, a + b);
