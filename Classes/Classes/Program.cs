@@ -1,19 +1,17 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Classes
 {
-
-    class Test
+    internal static class Program
     {
-        
-    }
-    internal class Program
-    {
-        
+        static void Main()
+        {
+            Console.WriteLine("Подготовка к бою:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Введите начальное здоровье бойца (10-100):");
+            int.TryParse(Console.ReadLine(), out int health);
+            var unit = new Unit(name, health);
+        }
     }
 }

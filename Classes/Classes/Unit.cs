@@ -8,7 +8,7 @@ namespace Classes
 {
     public class Unit
     {
-        private float _health = 100f;
+        private float _health;
         private float _armor = 0.6f;
         private int _damage = 5;
         
@@ -24,9 +24,10 @@ namespace Classes
         }
 
 
-        public Unit(string name)
+        public Unit(string name, float _health)
         {
             Name = name;
+            Health = _health;
         }
 
         public float GetRealHelth ()
