@@ -8,7 +8,7 @@ namespace Classes
 {
     public class Weapon
     {
-        private float _durability;
+        private float _durability = 1;
 
         public string Name {  get; }
         public int MinDamage { get; private set; }
@@ -23,17 +23,5 @@ namespace Classes
             _durability = durability;
 
         }
-
-        public bool ReduceDurability(float amount)
-        {
-            _durability -= amount;
-            if(_durability < 0) 
-            {
-                _durability = 0;
-            }
-            return _durability == 0;
-        }
-
-
     }
 }
